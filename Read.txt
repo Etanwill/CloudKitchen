@@ -1,0 +1,11 @@
+1️⃣ Start the main network
+python network_coordinator.py
+2️⃣ Start two nodes or more
+python threaded_node.py --node node1 --host 127.0.0.1 --port 8888
+python threaded_node.py --node node2 --host 127.0.0.1 --port 8889
+🧪 TEST FILE SHARING
+On node1
+node1> addfile image.png C:\Users\KDO\Downloads\image.png
+node1> send 127.0.0.1:8889 <file_id>
+On node2
+node2> localfiles
