@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package cloud;
+
+// Service definition
+service UserService {
+  rpc login (Request) returns (Response);
+  rpc verify_otp (OTPRequest) returns (Response);
+}
+
+// Messages
+message Request {
+  string login = 1;
+  string password = 2;
+}
+
+message OTPRequest {
+  string login = 1;
+  string otp_code = 2;
+}
+
+message Response {
+  string result = 1;
+}
